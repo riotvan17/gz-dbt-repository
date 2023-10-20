@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: raw_data_circle
-    description: Circle raw data lw
+    description: Circle sportswear raw data lw
     tables: 
       - name: raw_cc_stock
         description: product stock data
