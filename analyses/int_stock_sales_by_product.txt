@@ -1,0 +1,11 @@
+{%- set sum_cols = ['quantity', 'stock'] -%}
+
+
+SELECT 
+    product_id,
+   {% for col in sum_cols -%}
+       sum({{ col }}) as {{ col }},
+    {% endfor %}
+    avg(price) as avg_price
+FROM {{ref("int_stock__sales")}}
+GROUP BY product_id
